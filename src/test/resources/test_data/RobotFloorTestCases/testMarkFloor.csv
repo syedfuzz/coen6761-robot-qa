@@ -1,0 +1,31 @@
+NORTH, 5, 5, -1
+NORTH, 5, 5, 0
+NORTH, 5, 5, 1
+NORTH, 5, 5, 2
+NORTH, 5, 5, 4
+NORTH, 5, 5, 5
+NORTH, 5, 5, 6
+
+SOUTH, 5, 5, -1
+SOUTH, 5, 5, 0
+SOUTH, 5, 5, 1
+SOUTH, 5, 5, 2
+SOUTH, 5, 5, 3
+SOUTH, 5, 5, 4
+SOUTH, 5, 5, 5
+
+EAST, 5, 5, -1
+EAST, 5, 5, 0
+EAST, 5, 5, 1
+EAST, 5, 5, 2
+EAST, 5, 5, 5
+EAST, 5, 5, 3
+EAST, 5, 5, 4
+
+WEST, 5, 5, -1
+WEST, 5, 5, 0
+WEST, 5, 5, 1
+WEST, 5, 5, 2
+WEST, 5, 5, 4
+WEST, 5, 5, 6
+WEST, 5, 5, 5

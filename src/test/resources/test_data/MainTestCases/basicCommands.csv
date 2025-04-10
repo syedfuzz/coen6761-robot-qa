@@ -1,0 +1,6 @@
+input,expected_output,test_description
+"I 10\nQ\n","Welcome to Robot Game!|Enter command to initialise Robot|Robot initialized|Games stopped, Bye!","Basic initialization and quit"
+"I 10\nU\nD\nR\nM 5\nQ\n","Welcome to Robot Game!|Enter command to initialise Robot|Robot initialized|Enter next command|Games stopped, Bye!","Multiple commands sequence"
+"I 10\nq\n","Welcome to Robot Game!|Enter command to initialise Robot|Robot initialized|Games stopped, Bye!","Lowercase quit command"
+"I 10\nX\nY\nQ\n","Welcome to Robot Game!|Enter command to initialise Robot|Robot initialized|Wrong Input please give correct input|Games stopped, Bye!","Invalid commands handling"
+"I 10\nU\nR\nM 3\nD\nM 2\nL\nM 1\nP\nQ\n","Welcome to Robot Game!|Enter command to initialise Robot|Robot initialized|Enter next command|Games stopped, Bye!","Complex movement sequence" 

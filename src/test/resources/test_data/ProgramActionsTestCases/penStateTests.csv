@@ -1,0 +1,5 @@
+init_command,commands,expected_output,expected_mark,test_description
+"I 10","U|M 5|P","","false","Move with pen up"
+"I 10","D|M 5|P","","true","Move with pen down"
+"","U","Please initialize Robot first","false","Pen up without initialization"
+"","D","Please initialize Robot first","false","Pen down without initialization" 

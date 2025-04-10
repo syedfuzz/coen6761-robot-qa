@@ -1,0 +1,6 @@
+init_command,command,expected_output,test_description
+"I 10","M 5","","Valid movement"
+"I 10","M -5","Movement StepCount should be greater than 0","Negative steps"
+"I 10","M","Movement StepCount is missing","Missing steps"
+"I 10","M abc","Movement StepCount is invalid","Non-numeric steps"
+"","M 5","Please initialize Robot first","Move without initialization" 

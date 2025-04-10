@@ -1,0 +1,5 @@
+command,expected_output,test_description
+"I 10","Robot initialized","Valid initialization"
+"I -5","Floor Dimension should be greater than 0","Negative size"
+"I","Floor Dimension is missing","Missing size parameter"
+"I abc","Floor Dimension is invalid","Non-numeric size" 
