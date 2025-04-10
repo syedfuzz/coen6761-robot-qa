@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Robot.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project</a> &gt; <a href="index.source.html" class="el_package">com.coen6761.Robot</a> &gt; <span class="el_source">Robot.java</span></div><h1>Robot.java</h1><pre class="source lang-java linenums">package com.coen6761.Robot;
+
+public class Robot {
+    private int floorDim;
+    private int row;
+    private int col;
+    private boolean penUp;
+    private Directions direction;
+
+<span class="fc" id="L10">    public Robot(int floorDim){</span>
+<span class="fc" id="L11">        this.floorDim = floorDim - 1;</span>
+<span class="fc" id="L12">        this.row = floorDim - 1;</span>
+<span class="fc" id="L13">        this.col = 0;</span>
+<span class="fc" id="L14">        this.penUp = true;</span>
+<span class="fc" id="L15">        this.direction = Directions.NORTH;</span>
+
+<span class="fc" id="L17">    }</span>
+
+    public int getRow() {
+<span class="fc" id="L20">        return row;</span>
+    }
+
+    public void setRow(int row) {
+<span class="fc" id="L24">        this.row = row;</span>
+<span class="fc" id="L25">    }</span>
+
+    public int getCol() {
+<span class="fc" id="L28">        return col;</span>
+    }
+
+    public void setCol(int col) {
+<span class="fc" id="L32">        this.col = col;</span>
+<span class="fc" id="L33">    }</span>
+
+    public void setPenDown(){
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">        if(this.penUp == true){</span>
+<span class="fc" id="L37">            this.penUp = false;</span>
+        }
+<span class="fc" id="L39">    }</span>
+    
+    public void setpenUp(){
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if(this.penUp == false){</span>
+<span class="fc" id="L43">            this.penUp = true;</span>
+        }
+<span class="fc" id="L45">    }</span>
+
+    public boolean getPenUpStatus(){
+<span class="fc" id="L48">        return this.penUp;</span>
+    }
+
+    public void setDirection(Directions direction) {
+<span class="fc" id="L52">        this.direction = direction;</span>
+<span class="fc" id="L53">    }</span>
+
+    public Directions getDirection() {
+<span class="fc" id="L56">        return direction;</span>
+    }
+
+    public String printRobotStatus(){
+//        System.out.println(&quot;Current Bot Position: [&quot; + col + (floorDim - row) + &quot;]&quot;);
+//        System.out.println(&quot;Current Pen Position: &quot; + (penUp == true ? &quot;Pen Up&quot; : &quot;Pen Down&quot;));
+//        System.out.println(&quot;Current Bot Direction: &quot; + direction);
+<span class="fc" id="L63">        return &quot;Current Bot Position: [&quot; + col + (floorDim - row) + &quot;]\n&quot; +</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">                &quot;Current Pen Position: &quot; + (penUp ? &quot;Pen Up&quot; : &quot;Pen Down&quot;) + &quot;\n&quot; +</span>
+                &quot;Current Bot Direction: &quot; + direction;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

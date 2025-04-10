@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RobotService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project</a> &gt; <a href="index.source.html" class="el_package">com.coen6761.Robot</a> &gt; <span class="el_source">RobotService.java</span></div><h1>RobotService.java</h1><pre class="source lang-java linenums">package com.coen6761.Robot;
+
+public class RobotService{
+
+    private int floorDim;
+    private Robot robot;
+
+<span class="fc" id="L8">    public RobotService(int floorDim) {</span>
+<span class="fc" id="L9">        this.robot = new Robot(floorDim);</span>
+<span class="fc" id="L10">        this.floorDim = floorDim;</span>
+<span class="fc" id="L11">    }</span>
+
+    //move left
+    public Robot moveWest(int step) {
+<span class="fc" id="L15">        int curCol = robot.getCol();</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">        if(curCol - step &gt; 0){</span>
+<span class="nc" id="L17">            robot.setCol(curCol - step);</span>
+        } else {
+<span class="fc" id="L19">            robot.setCol(0);</span>
+        }
+<span class="fc" id="L21">        return robot; </span>
+    }
+
+    //move right
+    public Robot moveEast(int step) {
+<span class="fc" id="L26">        int curCol = robot.getCol();</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if(curCol + step &lt; floorDim){</span>
+<span class="fc" id="L28">            robot.setCol(curCol + step);</span>
+        } else {
+<span class="nc" id="L30">            robot.setCol(floorDim - 1);</span>
+        }
+<span class="fc" id="L32">        return robot;  </span>
+    }
+
+    public Robot moveNorth(int step) {
+<span class="fc" id="L36">        int curRow = robot.getRow();</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if(curRow - step &gt; 0){</span>
+<span class="fc" id="L38">            robot.setRow(curRow - step);</span>
+        } else {
+<span class="fc" id="L40">            robot.setRow(0);</span>
+        }
+<span class="fc" id="L42">        return robot;  </span>
+    }
+
+    public Robot moveSouth(int step) {
+<span class="nc" id="L46">        int curRow = robot.getRow();</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">        if(curRow + step &lt; floorDim){</span>
+<span class="nc" id="L48">            robot.setRow(curRow + step);</span>
+        } else {
+<span class="nc" id="L50">            robot.setRow(floorDim - 1);</span>
+        }
+<span class="nc" id="L52">        return robot;  </span>
+    }
+
+        // public Robot turnNorth(){
+    //     Directions direction = robot.getDirection();
+    //     if(direction!= Directions.NORTH){
+    //         robot.setDirection(Directions.NORTH);
+    //     }
+    //     return robot;
+    // }
+
+    // public Robot turnSouth(){
+    //     Directions direction = robot.getDirection();
+    //     if(direction!= Directions.SOUTH){
+    //         robot.setDirection(Directions.SOUTH);
+    //     }
+    //     return robot;
+    // }
+
+    //turn left
+    public Robot turnLeft(){
+<span class="fc" id="L73">        Directions direction = robot.getDirection();</span>
+<span class="fc" id="L74">        robot.setDirection(directionMappingForLeft(direction));</span>
+<span class="fc" id="L75">        return robot;</span>
+    }
+
+    //turn right
+    public Robot turnRight(){
+<span class="fc" id="L80">        Directions direction = robot.getDirection();</span>
+<span class="fc" id="L81">        robot.setDirection(directionMappingForRight(direction));</span>
+<span class="fc" id="L82">        return robot;</span>
+    }
+
+    public Directions directionMappingForLeft(Directions direction){
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        if(direction == Directions.NORTH){</span>
+<span class="fc" id="L87">            return Directions.WEST;</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">        } else if(direction == Directions.EAST){</span>
+<span class="fc" id="L89">            return Directions.NORTH;</span>
+<span class="pc bpc" id="L90" title="1 of 2 branches missed.">        } else if(direction == Directions.WEST){</span>
+<span class="fc" id="L91">            return Directions.SOUTH;</span>
+        } else {
+<span class="nc" id="L93">            return Directions.EAST;</span>
+        }
+    }
+
+    public Directions directionMappingForRight(Directions direction){
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">        if(direction == Directions.NORTH){</span>
+<span class="fc" id="L99">            return Directions.EAST;</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">        } else if(direction == Directions.EAST){</span>
+<span class="nc" id="L101">            return Directions.SOUTH;</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">        } else if(direction == Directions.WEST){</span>
+<span class="nc" id="L103">            return Directions.NORTH;</span>
+        } else {
+<span class="nc" id="L105">            return Directions.WEST;</span>
+        }
+    }
+
+    public Robot getRobot() {
+<span class="fc" id="L110">        return robot;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

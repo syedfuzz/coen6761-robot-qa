@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+project,com.coen6761.RobotFloor,FloorMarkingService,44,198,8,29,4,41,6,19,0,5
+project,com.coen6761.RobotFloor,Floor,0,43,0,4,0,11,0,6,0,4
+project,com.coen6761.HelperFunctions,HelperFunctions,3,22,0,4,1,9,1,5,1,3
+project,com.coen6761,Main,45,0,4,0,13,0,4,0,2,0
+project,com.coen6761,ProgramActions,26,377,15,46,8,104,15,33,0,12
+project,com.coen6761.MovementHistory,MovementType,0,39,0,0,0,7,0,1,0,1
+project,com.coen6761.MovementHistory,MovementEvent,3,57,0,4,1,17,1,8,1,6
+project,com.coen6761.MovementHistory,MovementHistoryService,38,248,7,14,8,56,7,17,0,12
+project,com.coen6761.Robot,Directions,0,27,0,0,0,5,0,1,0,1
+project,com.coen6761.Robot,RobotService,55,118,10,10,13,32,8,12,1,9
+project,com.coen6761.Robot,Robot,0,79,1,5,0,25,1,13,0,11

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProgramActions.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project</a> &gt; <a href="index.source.html" class="el_package">com.coen6761</a> &gt; <span class="el_source">ProgramActions.java</span></div><h1>ProgramActions.java</h1><pre class="source lang-java linenums">package com.coen6761;
+
+import com.coen6761.HelperFunctions.HelperFunctions;
+import com.coen6761.MovementHistory.MovementHistoryService;
+import com.coen6761.Robot.Directions;
+import com.coen6761.Robot.Robot;
+import com.coen6761.Robot.RobotService;
+import com.coen6761.RobotFloor.FloorMarkingService;
+
+<span class="fc" id="L10">public class ProgramActions {</span>
+
+    private RobotService robotService;
+    private FloorMarkingService floorMarkingService;
+    private MovementHistoryService movementHistoryService;
+    
+    public void actions(String command) {
+<span class="fc" id="L17">        String[] commands = command.split(&quot; &quot;);</span>
+<span class="fc" id="L18">        commands[0] = commands[0].toUpperCase();</span>
+
+<span class="fc bfc" id="L20" title="All 10 branches covered.">        switch (commands[0]) {</span>
+            case &quot;I&quot;:
+<span class="fc" id="L22">                callInitialiseFunction(commands);</span>
+<span class="fc" id="L23">                break;</span>
+            
+            case &quot;U&quot;:
+<span class="fc" id="L26">                callPenUpFunction();</span>
+<span class="fc" id="L27">                break;</span>
+            
+            case &quot;D&quot;:
+<span class="fc" id="L30">                callPenDownFunction();</span>
+<span class="fc" id="L31">                break;</span>
+
+            case &quot;C&quot;:
+<span class="fc" id="L34">                callCurrentPositionFunction(); </span>
+<span class="fc" id="L35">                break;</span>
+            
+            case &quot;R&quot;:
+<span class="fc" id="L38">                callRobotTurnRightFunction();</span>
+<span class="fc" id="L39">                break;</span>
+
+            case &quot;L&quot;:
+<span class="fc" id="L42">                callRobotTurnLeftFunction();</span>
+<span class="fc" id="L43">                break;</span>
+            
+            case &quot;P&quot;:
+<span class="fc" id="L46">                printFloorFunction();</span>
+<span class="fc" id="L47">                break;</span>
+            
+            case &quot;M&quot;:
+<span class="fc" id="L50">                moveRobotFunction(commands);</span>
+<span class="fc" id="L51">                break;</span>
+            case &quot;H&quot;:
+<span class="fc" id="L53">                displayMovementHistory();</span>
+<span class="fc" id="L54">                break;</span>
+            default:
+<span class="fc" id="L56">                System.out.println(&quot;Wrong Input please give correct input&quot;);</span>
+                break;
+        }
+<span class="fc" id="L59">    }</span>
+
+    private void displayMovementHistory(){
+<span class="pc bpc" id="L62" title="2 of 4 branches missed.">        if(movementHistoryService!=null &amp;&amp; movementHistoryService.getMovementList()!=null){</span>
+<span class="fc" id="L63">            movementHistoryService.display();</span>
+        } else {
+<span class="nc" id="L65">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L67">    }</span>
+    
+    private void printFloorFunction(){        
+<span class="pc bpc" id="L70" title="1 of 4 branches missed.">        if(floorMarkingService!=null &amp;&amp; floorMarkingService.getFloor()!=null){</span>
+<span class="fc" id="L71">            int[] robotCoordinates = new int[] {robotService.getRobot().getRow(), robotService.getRobot().getCol()};</span>
+<span class="fc" id="L72">            floorMarkingService.printFloorFunction(robotCoordinates, robotService.getRobot().getDirection());</span>
+<span class="fc" id="L73">        } else {</span>
+<span class="fc" id="L74">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L76">    }</span>
+    
+    private void callPenUpFunction(){
+<span class="pc bpc" id="L79" title="2 of 4 branches missed.">        if(robotService!=null &amp;&amp; robotService.getRobot()!=null){</span>
+<span class="fc" id="L80">            robotService.getRobot().setpenUp();</span>
+<span class="fc" id="L81">            movementHistoryService.addPenUpEvent();</span>
+<span class="fc" id="L82">            System.out.println(&quot;Robot Pen Set to Up&quot;);</span>
+        } else {
+<span class="nc" id="L84">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L86">    }</span>
+    
+    private void callPenDownFunction(){
+<span class="pc bpc" id="L89" title="1 of 4 branches missed.">        if(robotService!=null &amp;&amp; robotService.getRobot()!=null){</span>
+<span class="fc" id="L90">            robotService.getRobot().setPenDown();</span>
+<span class="fc" id="L91">            movementHistoryService.addPenDownEvent();</span>
+<span class="fc" id="L92">            System.out.println(&quot;Robot Pen Set to Down&quot;);</span>
+        } else {
+<span class="fc" id="L94">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L96">    }</span>
+    
+    private void callRobotTurnRightFunction(){
+<span class="pc bpc" id="L99" title="2 of 4 branches missed.">        if(robotService!=null &amp;&amp; robotService.getRobot()!=null){</span>
+<span class="fc" id="L100">            robotService.turnRight();</span>
+<span class="fc" id="L101">            movementHistoryService.addRightTurnEvent(robotService.getRobot().getPenUpStatus());</span>
+<span class="fc" id="L102">            System.out.println(&quot;Robot Turned Right&quot;);</span>
+        } else {
+<span class="nc" id="L104">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L106">    }</span>
+    
+    private void callRobotTurnLeftFunction(){
+<span class="pc bpc" id="L109" title="2 of 4 branches missed.">        if(robotService!=null &amp;&amp; robotService.getRobot()!=null){</span>
+<span class="fc" id="L110">            robotService.turnLeft();</span>
+<span class="fc" id="L111">            movementHistoryService.addLeftTurnEvent(robotService.getRobot().getPenUpStatus());</span>
+<span class="fc" id="L112">            System.out.println(&quot;Robot Turned Left&quot;);</span>
+        } else {
+<span class="nc" id="L114">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L116">    }</span>
+    
+    private void callInitialiseFunction(String[] commands){
+<span class="fc bfc" id="L119" title="All 2 branches covered.">        if(!HelperFunctions.IntegerExist(commands)){</span>
+<span class="fc" id="L120">        	System.out.println(&quot;Floor Dimension is missing&quot;);</span>
+<span class="fc" id="L121">        	return;</span>
+        }
+        
+<span class="fc" id="L124">        int floorDim = HelperFunctions.isValidInteger(commands[1]);</span>
+<span class="fc bfc" id="L125" title="All 2 branches covered.">        if(floorDim == -1){</span>
+<span class="fc" id="L126">        	System.out.println(&quot;Floor Dimension is invalid: &quot;);</span>
+        }
+        
+        
+<span class="fc bfc" id="L130" title="All 2 branches covered.">        if(!HelperFunctions.isIntegergreaterThanZero(floorDim)){</span>
+<span class="fc" id="L131">        	System.out.println(&quot;Floor Dimension should be greater than 0&quot;);</span>
+<span class="fc" id="L132">        	return;</span>
+        }
+        
+<span class="fc" id="L135">        robotService = new RobotService(floorDim);</span>
+<span class="fc" id="L136">        floorMarkingService = new FloorMarkingService(floorDim);</span>
+<span class="fc" id="L137">        movementHistoryService = new MovementHistoryService();</span>
+<span class="fc" id="L138">        movementHistoryService.addInitializeEvent(floorDim);</span>
+
+<span class="fc" id="L140">        System.out.println(&quot;Robot initialized&quot;);</span>
+<span class="fc" id="L141">    }</span>
+    
+
+    private void callCurrentPositionFunction(){
+<span class="pc bpc" id="L145" title="2 of 4 branches missed.">        if(robotService!=null &amp;&amp; robotService.getRobot()!=null){</span>
+<span class="fc" id="L146">            String curPosStr = robotService.getRobot().printRobotStatus();</span>
+<span class="fc" id="L147">            System.out.println(curPosStr);</span>
+<span class="fc" id="L148">        } else {</span>
+<span class="nc" id="L149">            System.out.println(&quot;Please initialize Robot first&quot;);</span>
+        }
+<span class="fc" id="L151">    }</span>
+
+    private void moveRobotFunction(String[] commands){
+<span class="fc bfc" id="L154" title="All 2 branches covered.">        if(!HelperFunctions.IntegerExist(commands)){</span>
+<span class="fc" id="L155">        	System.out.println(&quot;Movement StepCount is missing&quot;);</span>
+<span class="fc" id="L156">        	return;</span>
+        }
+        
+<span class="fc" id="L159">    	int moveMentSteps = HelperFunctions.isValidInteger(commands[1]);</span>
+<span class="fc bfc" id="L160" title="All 2 branches covered.">        if(moveMentSteps == -1){</span>
+<span class="fc" id="L161">        	System.out.println(&quot;Movement StepCount is invalid: &quot;);</span>
+<span class="fc" id="L162">        	return;</span>
+        }
+        
+<span class="fc bfc" id="L165" title="All 2 branches covered.">        if(!HelperFunctions.isIntegergreaterThanZero(moveMentSteps)){</span>
+<span class="fc" id="L166">        	System.out.println(&quot;Movement StepCount should be greater than 0&quot;);</span>
+<span class="fc" id="L167">        	return;</span>
+        }
+        
+<span class="pc bpc" id="L170" title="1 of 4 branches missed.">        if(robotService==null || robotService.getRobot()==null) {</span>
+<span class="fc" id="L171">        	System.out.println(&quot;Please initialize Robot first&quot;);</span>
+<span class="fc" id="L172">        	return;</span>
+        }
+        
+<span class="fc" id="L175">        Robot robot = robotService.getRobot();</span>
+<span class="fc" id="L176">        int[] startPos = new int[]{robot.getRow(), robot.getCol()};</span>
+<span class="pc bpc" id="L177" title="2 of 5 branches missed.">        switch (robot.getDirection()) {</span>
+            case NORTH:
+<span class="fc" id="L179">                robotService.moveNorth(moveMentSteps);</span>
+<span class="fc" id="L180">                markingTheFloor(startPos, moveMentSteps, Directions.NORTH);</span>
+<span class="fc" id="L181">                break;</span>
+            case SOUTH:
+<span class="nc" id="L183">                robotService.moveSouth(moveMentSteps);</span>
+<span class="nc" id="L184">                markingTheFloor(startPos, moveMentSteps, Directions.SOUTH);</span>
+<span class="nc" id="L185">                break;</span>
+            case EAST:
+<span class="fc" id="L187">                robotService.moveEast(moveMentSteps);</span>
+<span class="fc" id="L188">                markingTheFloor(startPos, moveMentSteps, Directions.EAST);</span>
+<span class="fc" id="L189">                break;</span>
+            case WEST:
+<span class="fc" id="L191">            robotService.moveWest(moveMentSteps);</span>
+<span class="fc" id="L192">                markingTheFloor(startPos, moveMentSteps, Directions.WEST);</span>
+                break;
+        }
+<span class="fc" id="L195">        movementHistoryService.addMoveEvent(moveMentSteps, robotService.getRobot().getPenUpStatus());</span>
+<span class="fc" id="L196">        System.out.println(&quot;Movement recorded&quot;);</span>
+        // movementHistoryService.addMoveEvent(validatedSteps(moveMentSteps, startPos, robot.getDirection()));
+<span class="fc" id="L198">    }</span>
+
+    // private int validatedSteps(int moveMentSteps, int[] startPos, Directions direction){
+    //     int floorDim = floorMarkingService.getFloor().getFloorArray().length - 1;
+    //     if(direction == Directions.NORTH){
+    //         int row = startPos[0];
+    //         if(row - moveMentSteps &lt; 0){
+    //             return row;
+    //         }
+    //     } else if(direction == Directions.SOUTH){
+    //         int row = startPos[0];
+    //         if(row + moveMentSteps &gt; floorDim - 1){
+    //             return floorDim - row;
+    //         }
+    //     } else if(direction == Directions.EAST){
+    //         int row = startPos[1];
+    //         if(row + moveMentSteps &gt; floorDim - 1){
+    //             return floorDim - row;
+    //         }
+    //     } else if(direction == Directions.WEST){
+    //         int row = startPos[1];
+    //         if(row - moveMentSteps &lt; 0){
+    //             return row;
+    //         }
+    //     }
+    //     return moveMentSteps;
+    // }
+
+    private void markingTheFloor(int[] startPos, int  moveMentSteps, Directions direction){
+<span class="fc bfc" id="L227" title="All 2 branches covered.">        if(robotService.getRobot().getPenUpStatus()==false){</span>
+<span class="fc" id="L228">            floorMarkingService.markFloor(direction, startPos, moveMentSteps);</span>
+        }
+<span class="fc" id="L230">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

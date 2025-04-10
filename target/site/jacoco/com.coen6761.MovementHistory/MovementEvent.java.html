@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MovementEvent.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project</a> &gt; <a href="index.source.html" class="el_package">com.coen6761.MovementHistory</a> &gt; <span class="el_source">MovementEvent.java</span></div><h1>MovementEvent.java</h1><pre class="source lang-java linenums">package com.coen6761.MovementHistory;
+
+public class MovementEvent {
+    private MovementType movement;
+    private int stepCount;
+    private boolean penUpStatus;
+    private int floorDim;
+    
+    //for move events
+<span class="fc" id="L10">    public MovementEvent(MovementType movement, int stepCount, boolean penUpStatus) {</span>
+<span class="fc" id="L11">        this.movement = movement;</span>
+<span class="fc" id="L12">        this.stepCount = stepCount;</span>
+<span class="fc" id="L13">        this.penUpStatus = penUpStatus;</span>
+<span class="fc" id="L14">    }</span>
+
+    //for intialise event
+<span class="fc" id="L17">    public MovementEvent(MovementType movement, int floorDim) {</span>
+<span class="fc" id="L18">        this.movement = movement;</span>
+<span class="fc" id="L19">        this.floorDim = floorDim;</span>
+<span class="fc" id="L20">    }</span>
+
+    public MovementType getMovement() {
+<span class="fc" id="L23">        return movement;</span>
+    }
+    public int getStepCount() {
+<span class="fc" id="L26">        return stepCount;</span>
+    }
+    public boolean getPenUpStatus() {
+<span class="nc" id="L29">        return penUpStatus;</span>
+    }
+    public int getFloorDim() {
+<span class="fc" id="L32">        return floorDim;</span>
+    }
+    @Override
+    public String toString() {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if(movement == MovementType.INITIALIZE){</span>
+<span class="fc" id="L37">            return &quot;MovementEvent: [ Action = &quot; + movement + &quot;, floorDim = &quot; + floorDim + &quot; ]&quot;;</span>
+        }
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if(stepCount != -1){</span>
+<span class="fc" id="L40">            return &quot;MovementEvent: [ Movement = &quot; + movement + &quot;, stepCount = &quot; + stepCount + &quot; ]&quot;;</span>
+        }
+<span class="fc" id="L42">        return &quot;MovementEvent: [ Action = &quot; + movement + &quot; ]&quot;;</span>
+    }
+
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
