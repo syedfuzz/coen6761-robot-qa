@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.coen6761.RobotMotionTest" time="0.272" tests="36" errors="2" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ASUS\Downloads\COEN6761_Project_Group_Grad4-main\COEN6761_Project_Group_Grad4-main\target\test-classes;C:\Users\ASUS\Downloads\COEN6761_Project_Group_Grad4-main\COEN6761_Project_Group_Grad4-main\target\classes;C:\Users\ASUS\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\ASUS\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ASUS\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\ASUS\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ASUS\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\ASUS\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\ASUS\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\ASUS\.m2\repository\org\mockito\mockito-core\3.11.2\mockito-core-3.11.2.jar;C:\Users\ASUS\.m2\repository\net\bytebuddy\byte-buddy\1.11.3\byte-buddy-1.11.3.jar;C:\Users\ASUS\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.3\byte-buddy-agent-1.11.3.jar;C:\Users\ASUS\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\ASUS\AppData\Local\Temp\surefire7167458044751232634\surefirebooter15328972457108609454.jar C:\Users\ASUS\AppData\Local\Temp\surefire7167458044751232634 2025-04-10T19-39-18_330-jvmRun1 surefire6063861028820097326tmp surefire_06623126418150710050tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\ASUS\Downloads\COEN6761_Project_Group_Grad4-main\COEN6761_Project_Group_Grad4-main\target\test-classes;C:\Users\ASUS\Downloads\COEN6761_Project_Group_Grad4-main\COEN6761_Project_Group_Grad4-main\target\classes;C:\Users\ASUS\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\ASUS\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ASUS\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\ASUS\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ASUS\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\ASUS\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\ASUS\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\ASUS\.m2\repository\org\mockito\mockito-core\3.11.2\mockito-core-3.11.2.jar;C:\Users\ASUS\.m2\repository\net\bytebuddy\byte-buddy\1.11.3\byte-buddy-1.11.3.jar;C:\Users\ASUS\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.3\byte-buddy-agent-1.11.3.jar;C:\Users\ASUS\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ASUS"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ASUS\Downloads\COEN6761_Project_Group_Grad4-main\COEN6761_Project_Group_Grad4-main"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ASUS\AppData\Local\Temp\surefire7167458044751232634\surefirebooter15328972457108609454.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7-58"/>
+    <property name="user.name" value="ASUS"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ASUS\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ASUS\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.2.2"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="C:\Users\ASUS\Downloads\COEN6761_Project_Group_Grad4-main\COEN6761_Project_Group_Grad4-main"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\miniconda3\condabin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2020.3.1\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Users\ASUS\Desktop\Concordia\Semester 4 (Winter 25)\COEN6761\apache-maven-3.9.9\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\miniconda3;C:\ProgramData\miniconda3\Scripts;;C:\Program Files\JetBrains\PyCharm Community Edition 2024.3.4\bin;;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\ASUS\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.2+7-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testMovementBoundary_decisions" classname="com.coen6761.RobotMotionTest" time="0.058"/>
+  <testcase name="testMovementDirections_conditions(Directions, String)[1]" classname="com.coen6761.RobotMotionTest" time="0.025"/>
+  <testcase name="testMovementDirections_conditions(Directions, String)[2]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testMovementDirections_conditions(Directions, String)[3]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testMovementDirections_conditions(Directions, String)[4]" classname="com.coen6761.RobotMotionTest" time="0.003"/>
+  <testcase name="testPenStateWithMovement_multipleConditions(String, String, boolean)[1]" classname="com.coen6761.RobotMotionTest" time="0.009"/>
+  <testcase name="testPenStateWithMovement_multipleConditions(String, String, boolean)[2]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testPenStateWithMovement_multipleConditions(String, String, boolean)[3]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testPenStateWithMovement_multipleConditions(String, String, boolean)[4]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testAllCommandStatements(String)[1]" classname="com.coen6761.RobotMotionTest" time="0.004"/>
+  <testcase name="testAllCommandStatements(String)[2]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testAllCommandStatements(String)[3]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testAllCommandStatements(String)[4]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testAllCommandStatements(String)[5]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testAllCommandStatements(String)[6]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testAllCommandStatements(String)[7]" classname="com.coen6761.RobotMotionTest" time="0.008"/>
+  <testcase name="testPenCommands_decisions" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testUninitializedCommands" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testGridSizeBoundaries" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testFloorMarking_mutation" classname="com.coen6761.RobotMotionTest" time="0.004"/>
+  <testcase name="testFullWorkflow" classname="com.coen6761.RobotMotionTest" time="0.006"/>
+  <testcase name="testInvalidInputs(String)[1]" classname="com.coen6761.RobotMotionTest" time="0"/>
+  <testcase name="testInvalidInputs(String)[2]" classname="com.coen6761.RobotMotionTest" time="0.003">
+    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at com.coen6761.RobotMotionTest.testInvalidInputs(RobotMotionTest.java:150)
+]]></error>
+  </testcase>
+  <testcase name="testInvalidInputs(String)[3]" classname="com.coen6761.RobotMotionTest" time="0.001">
+    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at com.coen6761.RobotMotionTest.testInvalidInputs(RobotMotionTest.java:150)
+]]></error>
+  </testcase>
+  <testcase name="testInvalidInputs(String)[4]" classname="com.coen6761.RobotMotionTest" time="0"/>
+  <testcase name="testInvalidInputs(String)[5]" classname="com.coen6761.RobotMotionTest" time="0"/>
+  <testcase name="testInvalidInputs(String)[6]" classname="com.coen6761.RobotMotionTest" time="0"/>
+  <testcase name="testInvalidInputs(String)[7]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testInvalidInputs(String)[8]" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testInvalidInputs(String)[9]" classname="com.coen6761.RobotMotionTest" time="0.002"/>
+  <testcase name="testInvalidInputs(String)[10]" classname="com.coen6761.RobotMotionTest" time="0"/>
+  <testcase name="testPenDownUpSamePosition_noStarShouldAppear" classname="com.coen6761.RobotMotionTest" time="0.003">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Star should appear when pen is lowered and raised at same position ==> expected: <true> but was: <false>
+	at com.coen6761.RobotMotionTest.testPenDownUpSamePosition_noStarShouldAppear(RobotMotionTest.java:284)
+]]></failure>
+  </testcase>
+  <testcase name="testInitialization_statements" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testCommandProcessing_dataFlow" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+  <testcase name="testHistoryReplayAccuracy" classname="com.coen6761.RobotMotionTest" time="0.002"/>
+  <testcase name="testStateTransitions" classname="com.coen6761.RobotMotionTest" time="0.001"/>
+</testsuite>
