@@ -6,6 +6,7 @@
 | Statements      | 84.95%   |
 | Branches        | 72.05%   |
 | Methods         | 92.75%   |
+| Classes         | 90.91%   |
 
 ## How to Run Tests
 ```bash
