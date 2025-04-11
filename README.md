@@ -16,3 +16,6 @@ mvn clean test jacoco:report
 ## View Reports
 - Coverage: `target/site/jacoco/index.html`
 - Test Results: `target/surefire-reports/`
+
+![Tests](https://github.com/your-username/coen448-robot-qa/actions/workflows/maven.yml/badge.svg)
+![Coverage](https://img.shields.io/badge/coverage-84.95%25-green)
