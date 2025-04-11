@@ -1,4 +1,4 @@
-# COEN 448 Robot QA Testing
+# COEN 6761/448 Robot QA Testing
 
 ## Test Coverage Results
 | Metric          | Coverage |
